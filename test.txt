@@ -1,0 +1,30 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+
+# Set up the WebDriver (Make sure ChromeDriver is installed)
+# Replace 'chromedriver_path' with your local ChromeDriver path
+driver = webdriver.Chrome()
+
+try:
+    # Open URL
+    driver.get("https://www.example.com")
+    
+    # Maximize the window
+    driver.maximize_window()
+    
+    # Wait for the page to load
+    time.sleep(3)
+
+    # Find element by XPath
+    element = driver.find_element(By.XPATH, "//h1")  # Example: XPath for the first <h1> tag
+    
+    # Print text of the element
+    print("Element Text:", element.text)
+
+except Exception as e:
+    print("Error:", e)
+
+finally:
+    # Close the browser
+    driver.quit()
