@@ -1,0 +1,14 @@
+import random
+
+first_names = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah"]
+last_names = ["Smith", "Johnson", "Brown", "Taylor", "Anderson", "Lee", "Martinez", "Clark"]
+
+def generate_random_name():
+    first = random.choice(first_names)
+    last = random.choice(last_names)
+    return f"{first} {last}"
+
+# Generate 5 random names
+for _ in range(5):
+    print(generate_random_name())
+
